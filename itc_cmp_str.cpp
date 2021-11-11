@@ -15,7 +15,7 @@ string itc_cmp_str(string str1, string str2, int num){
     for(int i = 0; i < len2 && i < len1; i++){
         result = result + str2[i];
     }
-    int j = len1 - itc_len(result);
+    int j = itc_len(result) - len2;
     for(int i = itc_len(result); i < len1; i++){
         result = result + str1[j];
         j++;
