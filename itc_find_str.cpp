@@ -1,22 +1,10 @@
 #include "str_easy.h"
 
 int itc_find_str(string str1, string str2){
-    int len = itc_len(str1), len2 = itc_len(str2), start = 0, point = 0, flag = 0;
-    string result = "";
-    for(int i = 0; i < len; i++){
-        if((str1[i] == str2[start]) and (flag == 0)){
-            point = i;
-            flag++;
-        }
+    for(int i = 0; itc_len(itc_slice_str(str1, i, i + itc_len(str2) - 1)) == itc_len(str2); i++){
+        if(itc_slice_str(str1, i, i + itc_len(str2) - 1) == str2) return i;
     }
-    for(int i = point; i <= len2; i++){
-        result = result + str1[i];
-    }
-    if(result == str2){
-        return point;
-    } else {
-        return -1;
-    }
+    return -1;
 }
 
 /*
