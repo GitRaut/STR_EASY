@@ -6,6 +6,9 @@ string itc_cmp_str(string str1, string str2, int num){
     if(str2 == ""){
         return str1;
     }
+    if(num > len1){
+        return str1;
+    }
     for(int i = 0; i < num; i++){
         result = result + str1[i];
     }
