@@ -11,7 +11,6 @@ int itc_find_str(string str1, string str2){
     }
     for(int i = point; i <= len2; i++){
         result = result + str1[i];
-        cout << result << endl;
     }
     if(result == str2){
         return point;
